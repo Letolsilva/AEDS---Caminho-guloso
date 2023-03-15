@@ -44,8 +44,9 @@ No Matriz.cpp desenvolvemos as funções:
 
 - Percorrer_matriz:  Esta função é as que nos permite caminhar por cada uma das matrizes, ela utiliza das funções de posições, as compara e a que for maior é para onde deve andar,salva na posição o dígito -1, se desloca, e realiza a soma do caminho.
 
+
+<p> <b>Exceções:</b>p</p>
 <p align="justify">
-<b>Exceções:</b> 
   Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro consiguirá a preferência. Neste programa temos como prioridades as seguintes posições:
 <p align="center">
 Direta > Esquerda > Baixo > Diagonal direita > Diagonal esquerda.</p>
