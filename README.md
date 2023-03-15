@@ -12,13 +12,13 @@ A partir da primeira matriz, tem como regras:
 >2. Retroceder para coluna anterior; 
 >3. Saltar para a linha de baixo; 
 >4. Ir em diagonal para baixo. 
-
+>
 
 <p>
 Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.</p>
 
 <p align="justify">
-<b>Exceções: </b>
+<p <b>Exceções: </b> </p>
   Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro tera preferência. Neste programa temos como prioridades as seguintes posições:
 <p align="center">
 Direta > Esquerda > Baixo > Diagonal Direita > Diagonal Esquerda.</p>
