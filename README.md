@@ -1,7 +1,7 @@
 # AEDS---Caminho-guloso
 
 <p align="justify">
-  Programa para disciplina de Estrutura de Dados I, desenvolvido na linguagem C++.Este trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho, no caso apresentado o caminho pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. O sistema lê K matrizes quadradas no tamanho NxN, escritas no arquivo "dataset/input.data". Ele se inicia na primeira matriz, sempre começando a percorre-la na posiçao [0][0] ate chegar ao final, posição [N-1][N-1].</p>
+  Programa para disciplina de Estrutura de Dados I, desenvolvido na linguagem C++.Este trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho, no caso apresentado a trajetória pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. O sistema lê K matrizes quadradas no tamanho NxN, escritas no arquivo "dataset/input.data". Ele se inicia na primeira matriz, sempre começando a percorre-la na posição [0][0] até chegar ao final, posição [N-1][N-1], isto por todo o arquivo.</p>
 
 <p align="justify">
 A partir da primeira matriz, tem como regras: 
@@ -19,7 +19,7 @@ Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não
 
 <p align="justify">
 <p <b>Exceções: </b> </p>
-  Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro tera preferência. Neste programa temos como prioridades as seguintes posições:
+  Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro consiguirá a preferência. Neste programa temos como prioridades as seguintes posições:
 <p align="center">
 Direta > Esquerda > Baixo > Diagonal direita > Diagonal esquerda.</p>
 </p>
