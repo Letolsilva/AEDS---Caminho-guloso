@@ -4,12 +4,12 @@
   Programa para disciplina de Estrutura de Dados I. Este trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho, no caso apresentado o caminho opta pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. O sistema lê K matrizes quadradas no tamanho NxN, escritas no arquivo "dataset/input.data". Ele se inicia na primeira matriz, sempre começando a percorre-la na posiçao [0][0] ate chegar ao final, posição [N-1][N-1].</p>
 
 <p align="justify">
-A partir da primeira matriz, você tem como regras: 
+A partir da primeira matriz, tem como regras: 
 </p>
 
 >  
->(a) avançar para a próxima coluna; 
->(b) retroceder para coluna anterior; 
+>1. avançar para a próxima coluna; 
+>2. retroceder para coluna anterior; 
 >(c)  saltar para a linha de baixo; 
 >(d) ir em diagonal para baixo. 
 
