@@ -7,8 +7,8 @@
 A partir da primeira matriz, tem como regras: 
 </p>
 
->  
->1. Avançar para a próxima coluna (Direita); 
+  
+- Avançar para a próxima coluna (Direita); 
 >2. Retroceder para coluna anterior (Esquerda); 
 >3. Saltar para a linha de baixo (Baixo); 
 >4. Ir em diagonal para baixo (Diagonal direita e Diagonal esquerda). 
