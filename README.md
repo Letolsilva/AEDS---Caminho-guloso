@@ -7,11 +7,11 @@
 A partir da primeira matriz, tem como regras: 
 </p>
 
-  
+> 
 - Avançar para a próxima coluna (Direita); 
->2. Retroceder para coluna anterior (Esquerda); 
->3. Saltar para a linha de baixo (Baixo); 
->4. Ir em diagonal para baixo (Diagonal direita e Diagonal esquerda). 
+- Retroceder para coluna anterior (Esquerda); 
+- Saltar para a linha de baixo (Baixo); 
+- Ir em diagonal para baixo (Diagonal direita e Diagonal esquerda). 
 >
 
 <p>
