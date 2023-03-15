@@ -5,12 +5,16 @@
 
 <p align="justify">
 A partir da primeira matriz, você tem como regras: 
+</p>
+
 >  
 >(a) avançar para a próxima coluna; 
 >(b) retroceder para coluna anterior; 
 >(c)  saltar para a linha de baixo; 
 >(d) ir em diagonal para baixo. 
->  
+
+
+<p>
 Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.</p>
 
 <p align="justify">
