@@ -20,7 +20,7 @@ Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não
 </p>
   
 
-#Resumo do código
+# Resumo do código
 
 <p align="justify">
 O código está dividido em três arquivos, Main.cpp, Funcao.hpp e Matriz.cpp. Vamos abordar cada um deles. </p>
