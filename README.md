@@ -8,10 +8,10 @@ A partir da primeira matriz, tem como regras:
 </p>
 
 >  
->1. Avançar para a próxima coluna; 
->2. Retroceder para coluna anterior; 
->3. Saltar para a linha de baixo; 
->4. Ir em diagonal para baixo. 
+>1. Avançar para a próxima coluna (Direita); 
+>2. Retroceder para coluna anterior (Esquerda); 
+>3. Saltar para a linha de baixo (Baixo); 
+>4. Ir em diagonal para baixo (Diagonal direita e Diagonal esquerda). 
 >
 
 <p>
@@ -21,7 +21,7 @@ Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não
 <p <b>Exceções: </b> </p>
   Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro tera preferência. Neste programa temos como prioridades as seguintes posições:
 <p align="center">
-Direta > Esquerda > Baixo > Diagonal Direita > Diagonal Esquerda.</p>
+Direta > Esquerda > Baixo > Diagonal direita > Diagonal esquerda.</p>
 </p>
 
 <p align="justify">
