@@ -1,5 +1,5 @@
-#ifndef JACK_H
-#define JACK_H
+#ifndef FUNCAO_H
+#define FUNCAO_H
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>

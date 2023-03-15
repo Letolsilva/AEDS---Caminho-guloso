@@ -1,4 +1,4 @@
-#include "Jack.h"
+#include "Funcao.h"
 
 short int num=0;
 void le_arquivo(Matrix *mat, fstream& arq){

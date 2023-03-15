@@ -1,4 +1,4 @@
-#include "Jack.h"
+#include "Funcao.h"
 #include <time.h>
 using namespace std;
 int main ()
