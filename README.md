@@ -16,7 +16,7 @@ A partir da primeira matriz, tem como regras:
 Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.</p>
 
 <p align="justify">
-  Ele deve caminhar ate chegar à última linha e coluna da matriz, mostrar o trajeto realizado e a soma de todo a trajetória.
+  Ele deve caminhar ate chegar à última linha e coluna da matriz, mostrar o trajeto realizado e a soma de todo o trajeto.
 </p>
   
 
