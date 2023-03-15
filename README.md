@@ -7,12 +7,10 @@
 A partir da primeira matriz, tem como regras: 
 </p>
 
-> 
 - Avançar para a próxima coluna (Direita); 
 - Retroceder para coluna anterior (Esquerda); 
 - Saltar para a linha de baixo (Baixo); 
 - Ir em diagonal para baixo (Diagonal direita e Diagonal esquerda). 
->
 
 <p>
 Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.</p>
