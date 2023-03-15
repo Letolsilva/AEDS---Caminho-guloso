@@ -38,14 +38,11 @@ Este arquivo contém a criação da matriz por meio de structs e as funções as
 No Matriz.cpp desenvolvemos as funções:
 </p>
 
-<p align="justify">
-- le_arquivo: lê os primeiros caracteres do arquivo que indica o tamanho da matriz, os trasforma em inteiros e os aloca dinamicamente. Após isto se inicia a leitura e armazenamento das matrizes presentes no arquivo.</p>
+- le_arquivo: lê os primeiros caracteres do arquivo que indica o tamanho da matriz, os trasforma em inteiros e os aloca dinamicamente. Após isto se inicia a leitura e armazenamento das matrizes presentes no arquivo.
 
-<p align="justify">
-- Funções de direçâo: Temos no total cinco funções de direções, são elas: para direita, esquerda, baixo e as duas diagonais. Cada uma delas recebe um tratamento único, indicando para em quais situações podem se mover e caso possam para onde vão se direcionar, utilizamos para isto a alteração das linhas e colunas e retornamos esta alteração, assim mais para frente no código conseguirmos comparar as posições da matriz.</p>
+- Funções de direçâo: Temos no total cinco funções de direções, são elas: para direita, esquerda, baixo e as duas diagonais. Cada uma delas recebe um tratamento único, indicando para em quais situações podem se mover e caso possam para onde vão se direcionar, utilizamos para isto a alteração das linhas e colunas e retornamos esta alteração, assim mais para frente no código conseguirmos comparar as posições da matriz.
 
-<p align="justify">
-- Percorrer_matriz:  Esta função é as que nos permite caminhar por cada uma das matrizes, ela utiliza das funções de posições, as compara e a que for maior é para onde deve andar,salva na posição o dígito -1, se desloca, e realiza a soma do caminho.</p>
+- Percorrer_matriz:  Esta função é as que nos permite caminhar por cada uma das matrizes, ela utiliza das funções de posições, as compara e a que for maior é para onde deve andar,salva na posição o dígito -1, se desloca, e realiza a soma do caminho.
 
 <p align="justify">
 <p <b>Exceções: </b> </p>
