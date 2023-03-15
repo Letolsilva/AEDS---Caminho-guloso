@@ -8,10 +8,10 @@ A partir da primeira matriz, tem como regras:
 </p>
 
 >  
->1. avançar para a próxima coluna; 
->2. retroceder para coluna anterior; 
->(c)  saltar para a linha de baixo; 
->(d) ir em diagonal para baixo. 
+>1. Avançar para a próxima coluna; 
+>2. Retroceder para coluna anterior; 
+>3. Saltar para a linha de baixo; 
+>4. Ir em diagonal para baixo. 
 
 
 <p>
