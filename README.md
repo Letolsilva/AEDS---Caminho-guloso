@@ -37,9 +37,8 @@ Este arquivo contém a criação da matriz por meio de structs e as funções as
 <b>Matriz.cpp: </b> 
 No Matriz.cpp desenvolvemos as funções:
 </p>
--a
--b
--<b>le_arquivo: </b> lê os primeiros caracteres do arquivo que indica o tamanho da matriz, os trasforma em inteiros e os aloca dinamicamente. Após isto se inicia a leitura e armazenamento das matrizes presentes no arquivo. 
+
+- le_arquivo: lê os primeiros caracteres do arquivo que indica o tamanho da matriz, os trasforma em inteiros e os aloca dinamicamente. Após isto se inicia a leitura e armazenamento das matrizes presentes no arquivo. 
 
 -<b>Funções de direçâo: </b> Temos no total cinco funções de direções, são elas: para direita, esquerda, baixo e as duas diagonais. Cada uma delas recebe um tratamento único, indicando para em quais situações podem se mover e caso possam para onde vão se direcionar, utilizamos para isto a alteração das linhas e colunas e retornamos esta alteração, assim mais para frente no código conseguirmos comparar as posições da matriz.
 
