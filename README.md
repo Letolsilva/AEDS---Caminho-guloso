@@ -1,7 +1,7 @@
 # AEDS---Caminho-guloso
 
 <p align="justify">
-  Programa para disciplina de Estrutura de Dados I. Este trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho, no caso apresentado o caminho opta pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. O sistema lê K matrizes quadradas no tamanho NxN, escritas no arquivo "dataset/input.data". Ele se inicia na primeira matriz, sempre começando a percorre-la na posiçao [0][0] ate chegar ao final, posição [N-1][N-1].</p>
+  Programa para disciplina de Estrutura de Dados I, desenvolvido na linguagem C++.Este trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho, no caso apresentado o caminho pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. O sistema lê K matrizes quadradas no tamanho NxN, escritas no arquivo "dataset/input.data". Ele se inicia na primeira matriz, sempre começando a percorre-la na posiçao [0][0] ate chegar ao final, posição [N-1][N-1].</p>
 
 <p align="justify">
 A partir da primeira matriz, tem como regras: 
