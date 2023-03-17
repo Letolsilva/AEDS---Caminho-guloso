@@ -129,7 +129,7 @@ void percorrer_matriz(Matrix *mat) {
         }
 	}
     mat->matriz[num-1][num-1].val=-1;
-
+    
     cout<<"\t\t\t\t Caminho realizado marcado por -1\t\t"<<endl;
             cout<<endl;
         for (i = 0; i < num; i++)
@@ -142,8 +142,10 @@ void percorrer_matriz(Matrix *mat) {
             cout<<endl;
         }
     
-	
-    cout<<"\nSoma: "<<total<<endl;
+	static int total_matrizes = 0; 
+    total_matrizes += total;
+    cout<<"\nSoma do trajeto da matriz lida por ultimo: "<<total<<endl;
+    cout<<"\nSoma do trajeto de todas as matrizes percorridas até o momento: "<<total_matrizes<<endl;
     cout<<"\n------------------------------------------------------------------------------------------------------------\n";
     cout<<endl;
    
