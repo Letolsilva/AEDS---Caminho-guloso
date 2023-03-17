@@ -2,7 +2,9 @@
 
 <p align="justify">
 Programa para disciplina de Estrutura de Dados I, desenvolvido na linguagem C++.<br>
-Este sistema trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho. No caso apresentado, a trajetória pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. </p>
+Este sistema trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho. No caso apresentado, a trajetória pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. 
+Em resumo, deve-se criar um algoritmo que a cada passo ele escolhe o maior valor possível, sem refazer suas decisões.
+</p>
 
 # Objetivos
 <p align="justify">
@@ -42,13 +44,15 @@ Ele deve caminhar até chegar à última linha e coluna da matriz, mostrar o tra
 </p>
   
 # Resumo do código
-
+<p align="justify">
+Utilizando a ideia do caminho guloso, este código leva como solução uma boa globalmente, ou seja, pode ser alcançada fazendo-se uma escolha boa localmente(neste caso a gulosa), isto é, aquela que parece ser a melhor naquele momento, desconsiderando-se resultados de subproblemas. Dessa forma, a implementação deste sistema em cada iteração, irá comparar as direções possíveis, na ordem que são lidas no código, e fazer a escolha que parece ser a melhor no momento, armazenando o maior valor dentre elas, isto objetivando chegar na melhor solução final que ele consegue.
+</p>
 <p align="justify">
 O código está dividido em três arquivos: Main.cpp, Funcao.hpp e Matriz.cpp. Vamos abordar cada um deles. </p>
 
 <p align="justify">
 <b>Main.cpp: </b>
-Na main, o arquivo "dataset/input.data" é aberto, este documento irá conter as matrizes que se deseja percorrer. Logo após é feito a leitura do arquivo, enquanto não for o final dele se lê a função "le_arquivo" e é percorrido as matrizes com a função "percorrer_matriz".</p>
+Na main, o arquivo "dataset/input.data" é aberto, este documento irá conter as matrizes que se deseja percorrer, a estrutura do documento contém os 2 primeiros carateres indicando a quantidade de linhas e colunas e o restante dele com as matrizes, sendo separadas cada uma delas por uma linha em branco. Logo após é feito a leitura do arquivo, enquanto não for o final dele se lê a função "le_arquivo" e é percorrido as matrizes com a função "percorrer_matriz".</p>
 
 <p align="justify">
 <b>Funcao.hpp: </b>  
@@ -68,7 +72,7 @@ No Matriz.cpp desenvolvemos as funções:
 
 <p> <b>Exceções:</b></p>
 <p align="justify">
-  Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro consiguirá a preferência. Neste programa temos como prioridades as seguintes posições:
+Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro consiguirá a preferência. Neste programa temos como prioridades as seguintes posições:
 <p align="center">
 Direta > Esquerda > Baixo > Diagonal direita > Diagonal esquerda</p>
 </p>
@@ -83,3 +87,14 @@ Imagem para representar a prioridade das direções, quanto mais forte o tom da 
 
 <p align="justify">
   Ao alcançar a última linha e coluna da matriz, ele percorre a próxima até se encerrar o arquivo. Por fim, é demostrado as matrizes com o caminho percorrido marcado por "-1" e a soma total de todo o trajeto.</p>
+
+# Compilação e Execução
+
+Esse código possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
+
+
+| Comando                |  Função                                                                                           |                     
+| -----------------------| ------------------------------------------------------------------------------------------------- |
+|  `make clean`          | Apaga a última compilação realizada contida na pasta build                                        |
+|  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
+|  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
