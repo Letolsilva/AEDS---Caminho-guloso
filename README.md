@@ -78,7 +78,7 @@ Direta > Esquerda > Baixo > Diagonal direita > Diagonal esquerda</p>
 </div>
 
 <p  align="center">
-Imagem para representar a prioridade das direções, quanto mais escura a cor mais preferencia ela recebe.
+Imagem para representar a prioridade das direções, quanto mais forte o tom da cor, mais preferencia o sentido recebe.
 </p>
 
 <p align="justify">
