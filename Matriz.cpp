@@ -55,7 +55,7 @@ short int baixo (Matrix *mat, int i, int j) {
 }
 short int diagonal_prin(Matrix *mat, int i, int j){
     short int posicao_diagonal=0;
-    if(j+1<num-1 && i+1<num-1){
+    if(j+1<=num-1 && i+1<=num-1){
         posicao_diagonal=mat->matriz[i+1][j+1].val;
 
     }
@@ -63,7 +63,7 @@ short int diagonal_prin(Matrix *mat, int i, int j){
 }
 short int diagonal_sec(Matrix *mat, int i, int j){
     short int posicao_diagonal_sec=0;
-    if(j-1>=0 && i+1<num-1){
+    if(j-1>=0 && i+1<=num-1){
         posicao_diagonal_sec=mat->matriz[i+1][j-1].val;
     }
     return posicao_diagonal_sec;
