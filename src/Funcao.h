@@ -9,21 +9,11 @@
 #include <string.h>
 #include<iostream>
 using namespace std;
-#define N 10
-typedef struct Valor Valores;
 typedef struct Matrix Matrizes;
-
-struct Valor
-{
-    short int val;
-    
-};
-
 struct Matrix
 {
-    Valor **matriz;
+    short int **matriz;
 };
-
 
 void percorrer_matriz(Matrix *mat);
 void le_arquivo(Matrix *mat, fstream& arq);
