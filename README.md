@@ -2,7 +2,7 @@
 
 <p align="justify">
 Programa para disciplina de Algoritmo de Estrutura de Dados I, desenvolvido na linguagem C++.<br>
-Este sistema trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho. No caso apresentado, a trajetória pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possiveis de se caminhar. 
+Este sistema trabalha o conceito de caminhamento em matrizes de forma gulosa, ou seja, optando por um dado caminho. No caso apresentado, a trajetória pelo valor da próxima casa, valor esse que deve ser o maior dentre as posições possíveis de se caminhar. 
 Em resumo, deve-se criar um algoritmo que a cada passo ele escolhe o maior valor possível, sem refazer suas decisões.
 </p>
 
@@ -61,18 +61,20 @@ Na main, o <b> arquivo</b> "dataset/input.data" é aberto, este documento irá c
 
 <p align="justify">
 <b>Funcao.hpp: </b>  
-Este arquivo contém a criação da matriz, sendo ela de ponteiro para ponteiro(pois ela guarda inteiros), por meio de struct e as funções as quais recebem como parâmetros a matriz, o arquivo e variáves utilizadas para acessar as posições.</p>
+Este arquivo contém a criação da matriz, sendo ela de ponteiro para ponteiro(ela guarda inteiros), por meio de struct e as funções as quais recebem como parâmetros a matriz, o arquivo e variáves utilizadas para acessar as posições.</p>
 
 <p align="justify">
 <b>Matriz.cpp: </b> 
 No Matriz.cpp desenvolvemos as funções: 
 </p>
+<p align="justify">
 
-- le_arquivo: lê os primeiros caracteres do arquivo que indica o tamanho da matriz, os trasforma em inteiros e é criado um vetor que aloca os ponteiros para os outros vetores, isto feito por meio dos números que foram lidos no arquivo. Após isto, é criado uma repetição que perocorre cada posição do vetor e aloca o outro vetor(o que foi criado acima) e salva o endereço de memória dele. Em resumo, este aloca memória suficiente para a quantidade de inteiros lidos à matriz e retorna os endereços de memória, feito isto a matriz foi alocada dinamicamente.
+- le_arquivo: lê os primeiros caracteres do arquivo referentes ao tamanho da matriz, os aplica uma conversão para inteiros, e cria uma array de ponteiro de tamanho 'N' para o armazenamento dos valores da matriz, isto feito por meio dos números que foram lidos no arquivo. Dito isso, é executado, dentro da função, um loop que percorre os valores da matriz e armazena dentro da array de ponteiros os endereços de memórias referentes aos índices da matriz. De tal modo que este aloca memória suficiente para a quantidade de inteiros lidos à matriz e retorna os endereços de memória, feito isto a matriz foi alocada dinamicamente e conseguimos usar seus valores.
 
 - Funções de direção: Existem no total cinco funções de direções, são elas: para direita, esquerda, baixo e as duas diagonais. Cada uma delas recebe um tratamento único, indicando para em quais situações podem se mover e caso possam para onde vão se direcionar, é utilizado para isto a alteração das linhas e colunas e retornado estás alterações, assim mais para frente no código é possível comparar as posições das matrizes.
 
-- Percorrer_matriz: Esta função permite caminhar por cada uma das matrizes, ela utiliza das funções de direção, compara cada uma delas com todas, a condição que obtiver todas suas condições verdadeias é acessada e dentro dela é realizada as modificações, sendo elas marcar a posição que está com "-1" indicando que foi percorrida, se deslocar para o sentido no qual entrou, salvar sua nova posição e armazenar o valor para a soma total do caminho. Após isto, ela sai deste "if"e  continua realizando a mesma ação até chegar na última linha e coluna da matriz.
+- Percorrer_matriz: Esta função permite caminhar por cada uma das matrizes, ela utiliza das funções de direção, compara cada uma delas com todas, a condição que obtiver todas suas condições verdadeias é acessada e dentro dela é realizada as modificações, sendo elas marcar a posição que está com "-1" indicando que foi percorrida, se deslocar para o sentido no qual entrou, salvar sua nova posição e armazenar o valor para a soma total do caminho. Após isto, ela sai deste "if"e  continua realizando a mesma ação até chegar na última linha e coluna da matriz.</p>
+<p align="justify">
 
 >
 >Exemplo de comparação das direções:<br>
@@ -93,7 +95,7 @@ No Matriz.cpp desenvolvemos as funções:
 >
 >Como todas receberam um valor verdadeiros ele entra neste "if" e realiza as operações citadas acima.<br>
 >
-
+</p>
 <p> <b>Exceções:</b></p>
 <p align="justify">
 Caso haja empate entre casas, o programa prioriza na sua ordem de leitura,ou seja ele vai avaliar as expressões lógicas e qual ele retorna um valor verdadeiro primeiro consiguirá a preferência. Neste programa temos como prioridades as seguintes posições:
