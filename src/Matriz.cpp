@@ -1,33 +1,37 @@
 #include "Funcao.h"
 
-short int num=0;
-void le_arquivo(Matrix *mat, fstream& arq){
+void  le_arquivo (Matrix *mat, fstream& arq){
     string n;
-    if(num==0){
-        arq>>n;
-        arq>>n;
-        num=stoi(n);
-    }
-        mat->matriz= new short int *[num];
-        for(int i=0; i<num; i++){
-            mat->matriz[i] = new short int[num];
-        }
-        cout<<"\t\t\t\t\t"<<"  MATRIZ "<<endl;
-        for (int i=0;i<num;i++){
-            cout<<"\t\t";
-            for (int j=0;j<num;j++){
-                arq>>mat->matriz[i][j];
-                cout<<"\t"<<mat->matriz[i][j];
+    short variavel;
+        bool primeiralinha =true;
+        cout<< " \t\t\t\t\t " << "   MATRIZ " <<endl;
+        for ( int i= 0 ;i<mat->num;i++){
+            cout<< " \t\t " ;
+            for ( int j=0 ;j<mat->num;j++){
+                    if(arq>>variavel){
+                        if(primeiralinha == true){
+                            j++;
+                            primeiralinha = false;
+                            cout<< " \t " <<mat-> matriz [0][0];
+                    }
+                    mat-> matriz [i][j]=variavel;
+
+                    cout<< " \t " <<mat-> matriz [i][j];
+                    }
+                    else{
+                        break;
+                    }              
             }
             cout<<endl;
         }
         cout<<endl;
 
-    
 }
+
+
 short int direito (Matrix *mat, short int i, short int j) {
     short int posicao_direita = 0;
-    if (j!=(num-1))
+    if (j!=(mat->num-1))
 		{
 			posicao_direita = mat->matriz[i][j+1];
 		} 
@@ -38,7 +42,7 @@ short int direito (Matrix *mat, short int i, short int j) {
 short int esquerdo (Matrix *mat, int i, int j) {
     short int Posicao_esquerda = 0;
 
-    if (!((j==0) || (i==(num-1))))
+    if (!((j==0) || (i==(mat->num-1))))
     {
         Posicao_esquerda = mat->matriz[i][j-1];
     }
@@ -47,7 +51,7 @@ short int esquerdo (Matrix *mat, int i, int j) {
 
 short int baixo (Matrix *mat, int i, int j) {
    short int posicao_baixo = 0;
-    if (!(i==(num-1)))
+    if (!(i==(mat->num-1)))
     {
         posicao_baixo = mat->matriz[i + 1][j];
     }
@@ -55,7 +59,7 @@ short int baixo (Matrix *mat, int i, int j) {
 }
 short int diagonal_prin(Matrix *mat, int i, int j){
     short int posicao_diagonal=0;
-    if(j+1<=num-1 && i+1<=num-1){
+    if(j+1<=mat->num-1 && i+1<=mat->num-1){
         posicao_diagonal=mat->matriz[i+1][j+1];
 
     }
@@ -63,7 +67,7 @@ short int diagonal_prin(Matrix *mat, int i, int j){
 }
 short int diagonal_sec(Matrix *mat, int i, int j){
     short int posicao_diagonal_sec=0;
-    if(j-1>=0 && i+1<=num-1){
+    if(j-1>=0 && i+1<=mat->num-1){
         posicao_diagonal_sec=mat->matriz[i+1][j-1];
     }
     return posicao_diagonal_sec;
@@ -74,7 +78,7 @@ void percorrer_matriz(Matrix *mat) {
     
     short int i = 0, j = 0, agora = mat->matriz[i][j], total = agora, pos_direita, pos_esquerda, pos_baixo, pos_diagonal, pos_diagonal_sec;
 
-    while ((i<num-1 || j<num-1) )
+    while ((i<mat->num && j<mat->num) )
 	{
 		pos_direita = direito(mat, i, j);
 		pos_esquerda = esquerdo(mat, i, j);
@@ -128,14 +132,14 @@ void percorrer_matriz(Matrix *mat) {
 
         }
 	}
-    mat->matriz[num-1][num-1]=-1;
+    mat->matriz[mat->num-1][mat->num-1]=-1;
     
     cout<<"\t\t\t\t Caminho realizado marcado por -1\t\t"<<endl;
             cout<<endl;
-        for (i = 0; i < num; i++)
+        for (i = 0; i < mat->num; i++)
 	    {
 		    cout<<"\t\t";
-            for (j = 0; j < num; j++)
+            for (j = 0; j < mat->num; j++)
             {
                 cout<<"\t"<<mat->matriz[i][j];
             }
