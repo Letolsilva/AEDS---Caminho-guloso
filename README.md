@@ -48,7 +48,7 @@ Observação: <br>
 Ao chegar a última linha da matriz, ele deverá andar apenas para direita, recebendo com prioridade chegar a última coluna e não comparar os valores.
 </p>
 
-# Resumo do código
+# Lógica do código
 <p align="justify">
 Utilizando a ideia do caminho guloso, este código leva como solução uma boa globalmente, ou seja, pode ser alcançada fazendo-se uma escolha boa localmente(neste caso a gulosa), isto é, aquela que parece ser a melhor naquele momento, desconsiderando-se resultados de subproblemas. Dessa forma, a implementação deste sistema em cada iteração, irá comparar as direções possíveis, na ordem que são lidas no código, e fazer a escolha que parece ser a melhor no momento, armazenando o maior valor dentre elas, isto objetivando chegar na melhor solução final que ele consegue.
 </p>
@@ -57,11 +57,12 @@ O código está dividido em três arquivos: Main.cpp, Funcao.hpp e Matriz.cpp. V
 
 <p align="justify">
 <b>Main.cpp: </b>
-Na main, o <b> arquivo</b> "dataset/input.data" é aberto, este documento irá conter as matrizes que se deseja percorrer, a estrutura do documento contém os 2 primeiros carateres indicando a quantidade de linhas e colunas e o restante dele com as matrizes, sendo separadas cada uma delas por uma linha em branco. Logo após, enquanto não for o final do arquivo se lê a função "le_arquivo" e é percorrido as matrizes com a função "percorrer_matriz", na chamada da função foi preciso passar o endereço da variável m e isso foi possível usando o operador '&'.</p>
+Na main, foi declarada uma variável do tipo arquivo e ela foi associada a um arquivo em disco. O primeiro parâmetro passado para o método open é o nome da pasta/arquivo ("dataset/input.data"), a estrutura do documento contém os 2 primeiros caracteres indicando a quantidade de linhas e colunas da matriz e o restante dele com as matrizes, sendo separadas cada uma delas por uma linha em branco. Após isto, é feita uma tentativa de abertura do arquivo, o programa testa se a operação de abertura teve sucesso, caso não, uma mensagem de erro é fornecida e o programa interrompe sua execução. Em seguida, o programa lê os dois primeiros caracteres do arquivo e são passados para a variável 'num' da matriz na qual será utilizada depois para armazenar o tamanho do array. <br>
+No comando while, existe uma condição que é verdadeira enquanto o programa ler valores diferentes de final de arquivo. Dentro do while, cria uma array de ponteiro de tamanho 'N' para o armazenamento dos valores da matriz, isto feito por meio dos dois primeiros números que foram lidos anteriormente. Dito isso, é executado, dentro da função, um loop que percorre os valores da matriz e armazena dentro da array de ponteiros os endereços de memórias referentes aos índices da matriz. De tal modo que este aloca memória suficiente para a quantidade de inteiros lidos à matriz e retorna os endereços de memória, feito isto a matriz foi alocada dinamicamente e conseguimos usar seus valores (linhas 21 a 24). Finalizando, a primeira posição da matriz (0,0) recebe seu primeiro valor, lido pela condição dentro do while, e entram nas funções que irão realizar as operações.
 
 <p align="justify">
 <b>Funcao.hpp: </b>  
-Este arquivo contém a criação da matriz, sendo ela de ponteiro para ponteiro(ela guarda inteiros), por meio de struct e as funções as quais recebem como parâmetros a matriz, o arquivo e variáves utilizadas para acessar as posições.</p>
+Este arquivo contém a criação da matriz, sendo ela de ponteiro para ponteiro(ela guarda inteiros), por meio de struct, essa estrutura também contém o 'num' no qual armazena o tamanho da matriz e as funções as quais recebem como parâmetros a matriz, o arquivo e variáves utilizadas para acessar as posições e soma.</p>
 
 <p align="justify">
 <b>Matriz.cpp: </b> 
@@ -69,7 +70,10 @@ No Matriz.cpp desenvolvemos as funções:
 </p>
 <p align="justify">
 
-- le_arquivo: lê os primeiros caracteres do arquivo referentes ao tamanho da matriz, os aplica uma conversão para inteiros, e cria uma array de ponteiro de tamanho 'N' para o armazenamento dos valores da matriz, isto feito por meio dos números que foram lidos no arquivo. Dito isso, é executado, dentro da função, um loop que percorre os valores da matriz e armazena dentro da array de ponteiros os endereços de memórias referentes aos índices da matriz. De tal modo que este aloca memória suficiente para a quantidade de inteiros lidos à matriz e retorna os endereços de memória, feito isto a matriz foi alocada dinamicamente e conseguimos usar seus valores.
+- le_arquivo: Ela se incicia com uma variável booleana como true, ela é responsável por manter a leitura do arquivo da primeira linha e coluna de forma correta, pois a primeira posição já foi definida na main (linha 6). Em seguida, existem dois loops, um de linhas (i) e outro de colunas (j), que acontecerão até o tamanho da matriz (num). Dentro dele, se encontra o comando  if no qual lê os dados do arquivo e recebe uma condição que é verdadeira enquanto o programa ler valores diferentes de final de arquivo. (linha 11).<br>
+Ainda dentro da condição acima:<br>
+Se for uma primeira iteração de uma matriz, a variável boolena vai se encontrar verdadeira, então irá entrar na condição 'se for a primeira linha' (linha 13), dentro dela a coluna mudará para j=1 e a variável se torna false, para não ocorrer de entrar novamente caso não seja a primeira linha, isto para os valores serem armazenados corretamente em suas posições (linhas 13 a 18). <br>
+Após esse caso em particular e fora dele, toda leitura do arquivo vai se armazenando para dentro da matriz e aparecendo na tela, caso chegue no tamanho final da matriz ele inicia a leitura da próxima e quando chega ao final do arquivo, ele se encerra <br>
 
 - Funções de direção: Existem no total cinco funções de direções, são elas: para direita, esquerda, baixo e as duas diagonais. Cada uma delas recebe um tratamento único, indicando para em quais situações podem se mover e caso possam para onde vão se direcionar, é utilizado para isto a alteração das linhas e colunas e retornado estás alterações, assim mais para frente no código é possível comparar as posições das matrizes.
 
@@ -84,7 +88,7 @@ No Matriz.cpp desenvolvemos as funções:
 >
 > if (j!=(num-1))  //Se coluna for diferente da última coluna <br>
 >		{<br>
->			posicao_direita = mat->matriz[i][j+1]; //matriz recebe ums posição para direita <br>
+>			posicao_direita = mat->matriz[i][j+1]; //matriz recebe uma posição para direita <br>
 >		} <br>
 >   return posicao_direita;<br>
 >
