@@ -1,20 +1,22 @@
 #include "Funcao.h"
 
 void  le_arquivo (Matrix *mat, fstream& arq){
-    string n;
-    short variavel;
-        bool primeiralinha =true;
+    short apoio_matriz;
+
+        bool primeiralinha = true;
         cout<< " \t\t\t\t\t " << "   MATRIZ " <<endl;
         for ( int i= 0 ;i<mat->num;i++){
             cout<< " \t\t " ;
             for ( int j=0 ;j<mat->num;j++){
-                    if(arq>>variavel){
+                    if(arq>>apoio_matriz){
+                        // i=0 j=0
                         if(primeiralinha == true){
+                            //i=0 j=1
                             j++;
                             primeiralinha = false;
                             cout<< " \t " <<mat-> matriz [0][0];
                     }
-                    mat-> matriz [i][j]=variavel;
+                    mat-> matriz [i][j]=apoio_matriz;
 
                     cout<< " \t " <<mat-> matriz [i][j];
                     }
@@ -74,11 +76,11 @@ short int diagonal_sec(Matrix *mat, int i, int j){
     
 }
 
-void percorrer_matriz(Matrix *mat) {
+void percorrer_matriz(Matrix *mat, int *totais) {
     
     short int i = 0, j = 0, agora = mat->matriz[i][j], total = agora, pos_direita, pos_esquerda, pos_baixo, pos_diagonal, pos_diagonal_sec;
 
-    while ((i<mat->num && j<mat->num) )
+    while ((i<mat->num-1 || j<mat->num-1) )
 	{
 		pos_direita = direito(mat, i, j);
 		pos_esquerda = esquerdo(mat, i, j);
@@ -145,11 +147,9 @@ void percorrer_matriz(Matrix *mat) {
             }
             cout<<endl;
         }
-    
-	static int total_matrizes = 0; 
-    total_matrizes += total;
+    *totais += total;
     cout<<"\nSoma do trajeto da matriz lida por ultimo: "<<total<<endl;
-    cout<<"\nSoma do trajeto de todas as matrizes percorridas até o momento: "<<total_matrizes<<endl;
+    cout<<"\nSoma do trajeto de todas as matrizes percorridas até o momento: "<<*totais<<endl;
     cout<<"\n------------------------------------------------------------------------------------------------------------\n";
     cout<<endl;
    

@@ -18,7 +18,7 @@ struct Matrix
     short int num;
 };
 
-void percorrer_matriz(Matrix *mat);
+void percorrer_matriz(Matrix *mat, int *totais);
 void le_arquivo(Matrix *mat, fstream& arq);
 
 
