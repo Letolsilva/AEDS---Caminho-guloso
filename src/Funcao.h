@@ -10,7 +10,6 @@
 #include<iostream>
 using namespace std;
 typedef struct Matrix Matrizes;
-static int cont=0;
 
 struct Matrix
 {
