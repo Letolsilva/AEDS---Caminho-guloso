@@ -4,7 +4,7 @@ using namespace std;
 int main ()
 {	
     Matrix m;
-    int ler_primeiros_num, totais=0;
+    int leitura, totais=0;
     fstream arq;
 
     arq.open("dataset/input.data");
@@ -13,16 +13,16 @@ int main ()
     	exit(-1);
     }
   
-    arq>>ler_primeiros_num>>ler_primeiros_num;
+    arq>>leitura>>leitura;
 
-    m.num=ler_primeiros_num;
+    m.num=leitura;
 
-    while(arq>>ler_primeiros_num){
+    while(arq>>leitura){
         m.matriz = new  short  int *[m.num];
         for ( int i= 0 ; i<m.num; i++){
             m.matriz[i] = new  short  int [m.num];
         }
-        m.matriz[0][0]=ler_primeiros_num;
+        m.matriz[0][0]=leitura;
 
         le_arquivo(&m, arq);
         percorrer_matriz(&m, &totais);  

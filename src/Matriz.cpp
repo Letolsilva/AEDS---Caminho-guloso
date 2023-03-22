@@ -2,14 +2,14 @@
 
 void  le_arquivo (Matrix *mat, fstream& arq){
     short apoio_matriz;
-
+   
         bool primeiralinha = true;
         cout<< " \t\t\t\t\t " << "   MATRIZ " <<endl;
         for ( int i= 0 ;i<mat->num;i++){
             cout<< " \t\t " ;
             for ( int j=0 ;j<mat->num;j++){
                     if(arq>>apoio_matriz){
-                        // i=0 j=0
+                         //i=0 j=0
                         if(primeiralinha == true){
                             //i=0 j=1
                             j++;
