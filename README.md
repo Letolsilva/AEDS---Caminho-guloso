@@ -57,8 +57,8 @@ O código está dividido em três arquivos: Main.cpp, Funcao.hpp e Matriz.cpp. V
 
 <p align="justify">
 <b>Main.cpp: </b>
-Na main, foi declarada uma variável do tipo arquivo e ela foi associada a um arquivo em disco. O primeiro parâmetro passado para o método open é o nome da pasta/arquivo ("dataset/input.data"), a estrutura do documento contém os 2 primeiros caracteres indicando a quantidade de linhas e colunas da matriz e o restante dele com as matrizes, sendo separadas cada uma delas por uma linha em branco. Após isto, é feita uma tentativa de abertura do arquivo, o programa testa se a operação de abertura teve sucesso, caso não, uma mensagem de erro é fornecida e o programa interrompe sua execução. Em seguida, o programa lê os dois primeiros caracteres do arquivo (linha 16) e são passados para a variável 'num' da matriz na qual será utilizada depois para armazenar o tamanho do array. <br>
-No comando while, existe uma condição que é verdadeira enquanto o programa ler valores diferentes de final de arquivo. Dentro do while, cria uma array de ponteiro de tamanho 'N' para o armazenamento dos valores da matriz, isto feito por meio dos dois primeiros números que foram lidos anteriormente. Dito isso, é executado, dentro da função, um loop que percorre os valores da matriz e armazena dentro da array de ponteiros os endereços de memórias referentes aos índices da matriz. De tal modo que é alocado memória suficiente para a quantidade de inteiros lidos à matriz e retorna os endereços de memória, feito isto a matriz foi alocada dinamicamente e conseguimos usar seus valores (linhas 21 a 24). Finalizando, a primeira posição da matriz (0,0) recebe seu primeiro valor, lido pela condição dentro do while, e entram nas funções que irão realizar as operações.
+Na main, foi declarada uma variável do tipo arquivo e ela foi associada a um arquivo em disco. O primeiro parâmetro passado para o método open é o nome da pasta/arquivo ("dataset/input.data"), a estrutura do documento contém os 2 primeiros caracteres indicando a quantidade de linhas e colunas da matriz e o restante dele com as matrizes, sendo separadas cada uma delas por uma linha em branco. Em seguida, o programa lê os dois primeiros caracteres do arquivo (linha 16) e são passados para a variável 'num' da matriz na qual será utilizada depois para armazenar o tamanho do array. <br>
+No comando while, existe uma condição que é verdadeira enquanto o programa ler valores diferentes de final de arquivo. Dentro do while, cria uma array de ponteiro de tamanho 'N' para o armazenamento dos valores da matriz, isto feito por meio dos dois primeiros números que foram lidos anteriormente. Dito isso, é executado, dentro da função, um loop que percorre os valores da matriz e armazena dentro da array de ponteiros os endereços de memórias referentes aos índices da matriz. De tal modo que é alocado memória suficiente para a quantidade de inteiros lidos à matriz (linhas 21 a 24). Finalizando, a primeira posição da matriz (0,0) recebe seu primeiro valor, lido pela condição dentro do while, e entram nas funções que irão realizar as operações.
 
 <p align="justify">
 <b>Funcao.hpp: </b>  
@@ -84,7 +84,7 @@ Após esse caso em particular e fora dele, toda leitura do arquivo vai se armaze
 >Exemplo de comparação das direções:<br>
 ><br>
 >Vamos supor que em uma matriz K e em uma posição i,j que não se encontra na última coluna da matriz e o maior valor dentre todas as direções esteja a sua direita, como o programa vai interpretar que deve ir para este sentido?<br>
->Primeiro vai verificar a condição nas funções de direção da direta para vê se é possível ele ir(Se não for possivel verifica as outras).<br>
+>Primeiro vai verificar a condição nas funções de direção da direta para vê se é possível ele ir (Se não for possivel verifica as outras).<br>
 >
 > if (j!=(num-1))  //Se coluna for diferente da última coluna <br>
 >		{<br>
