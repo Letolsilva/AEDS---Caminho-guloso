@@ -145,7 +145,7 @@ Demonstração de um dos arquivos testado:
 
 # Compilação e Execução
 
-Esse código possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para compilar abra a pasta src no terminal, após temos as seguintes diretrizes de execução:
+Esse código possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Após temos as seguintes diretrizes de execução:
 
 
 | Comando                |  Função                                                                                           |                     
